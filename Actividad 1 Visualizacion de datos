@@ -1,0 +1,160 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "mount_file_id": "1IcGlXFgqDkMoDc3t2RtbtYAxRj8NcUPA",
+      "authorship_tag": "ABX9TyPXfRMVBlThr1mYmyLarnAr",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JacquelineDiazdeleon/Visualizaci-n-de-Datos/blob/main/Actividad%201%20Visualizacion%20de%20datos\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ejercicio 1\n",
+        "Teoría:\n",
+        "Explicación de series y DataFrames diferencias y usos de cada estructura"
+      ],
+      "metadata": {
+        "id": "F7ofe_ZxRw0e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "Sdo_y0fIRsFE"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#*** Crear una serie***"
+      ],
+      "metadata": {
+        "id": "uuAub2jRSJlx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s = pd.Series([1, 3, 5, np.nan, 6, 8])\n",
+        "print(\"Serie:\")\n",
+        "print(s)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eKTGNzjVSO3d",
+        "outputId": "7a02da62-34c8-4fd3-e2cf-ebbe90577b93"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Serie:\n",
+            "0    1.0\n",
+            "1    3.0\n",
+            "2    5.0\n",
+            "3    NaN\n",
+            "4    6.0\n",
+            "5    8.0\n",
+            "dtype: float64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df = pd.DataFrame({\n",
+        "    'A': [1, 2, 3, 4],\n",
+        "    'B': pd.Timestamp('20230101'),\n",
+        "    'C': pd.Series(1, index=list(range(4)), dtype='float32'),\n",
+        "    'D': np.array([3] * 4, dtype='int32'),\n",
+        "    'E': pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n",
+        "    'F': 'foo'\n",
+        "})\n",
+        "print(\"\\nDataFrame:\")\n",
+        "print(df)\n",
+        "\n",
+        "\n",
+        "print(\"\\nTipos de datos:\")\n",
+        "print(df.dtypes)\n",
+        "print(\"\\nPrimeras 2 filas:\")\n",
+        "print(df.head(2))\n",
+        "print(\"\\nÚltimas 2 filas:\")\n",
+        "print(df.tail(2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jebcV2AyUGFZ",
+        "outputId": "2ffbad80-26cc-4425-d157-1d1b36f93d87"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "DataFrame:\n",
+            "   A          B    C  D      E    F\n",
+            "0  1 2023-01-01  1.0  3   test  foo\n",
+            "1  2 2023-01-01  1.0  3  train  foo\n",
+            "2  3 2023-01-01  1.0  3   test  foo\n",
+            "3  4 2023-01-01  1.0  3  train  foo\n",
+            "\n",
+            "Tipos de datos:\n",
+            "A            int64\n",
+            "B    datetime64[s]\n",
+            "C          float32\n",
+            "D            int32\n",
+            "E         category\n",
+            "F           object\n",
+            "dtype: object\n",
+            "\n",
+            "Primeras 2 filas:\n",
+            "   A          B    C  D      E    F\n",
+            "0  1 2023-01-01  1.0  3   test  foo\n",
+            "1  2 2023-01-01  1.0  3  train  foo\n",
+            "\n",
+            "Últimas 2 filas:\n",
+            "   A          B    C  D      E    F\n",
+            "2  3 2023-01-01  1.0  3   test  foo\n",
+            "3  4 2023-01-01  1.0  3  train  foo\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
