@@ -1,0 +1,72 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "mount_file_id": "1IcGlXFgqDkMoDc3t2RtbtYAxRj8NcUPA",
+      "authorship_tag": "ABX9TyOcPtdv4arxxjKlCM4E8pSg",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JacquelineDiazdeleon/Visualizaci-n-de-Datos/blob/main/Ejercicio%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ejercicio 1\n",
+        "Teoría:\n",
+        "Explicación de series y DataFrames diferencias y usos de cada estructura"
+      ],
+      "metadata": {
+        "id": "F7ofe_ZxRw0e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "Sdo_y0fIRsFE"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Crear una serie"
+      ],
+      "metadata": {
+        "id": "uuAub2jRSJlx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "eKTGNzjVSO3d"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
